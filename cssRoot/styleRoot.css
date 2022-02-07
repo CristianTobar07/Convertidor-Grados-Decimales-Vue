@@ -22,9 +22,10 @@ h1{
     text-align: center;
 }
 #texto{
-    font-size: 2.2vh;
+    font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: justify;
+    margin-right: 1%;
 }
 #titulo{
     font-size: 5vh;
@@ -33,3 +34,4 @@ h1{
     animation: animate__tada;
     color: aqua;
 }
+
