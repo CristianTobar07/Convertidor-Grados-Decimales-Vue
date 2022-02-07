@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor</title>
+    <link rel="icon" href="./img/icon.png">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./cssRoot/styleRoot.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+    <div id="app" class="container-fluid px-3">
+        <hr>
+        <h1 class="animate__heartBeat" id="titulo">{{title}}</h1>
+        <hr>
+            
+        <p id="texto">Convertidor de grados, minutos y segundos a grados decimales.</p>
+        
+        <form>
+            <div class="row justify-content-center pt-4">
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                    <p>
+                        <label for="degree" class="col-4" id="texto">Grados:</label>
+                        <input
+                            id="degree"
+                            v-model="degree"
+                            type="text"
+                            name="degree"
+                            placeholder="degree"
+                        >
+                        </p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                    <p>
+                        <label for="minutes" class="col-4" id="texto">Minutos:</label>
+                        <input
+                            id="minutes"
+                            v-model="minutes"
+                            type="text"
+                            name="minutes"
+                            placeholder="minutes"
+                        >
+                        </p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                    <p>
+                        <label for="seconds" class="col-4" id="texto">Segundos:</label>
+                        <input
+                            id="seconds"
+                            v-model="seconds"
+                            type="text"
+                            name="seconds"
+                            placeholder="seconds"
+                        >
+                        </p>
+                </div>
+            </div>
+        </form>
+        
+        
+        <div class="justify-content-center" v-if = "degree!='' & (degree>=0 || minutes>=0 || seconds>=0)">
+            
+            <h2 id="respuesta">{{convertir}}°</h2>
+        </div>
+    </div>
+ 
+    <script src="js/mainRoot.js"></script>
+    <script src="./js/mountRoot.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script> -->
+</body>
+</html>

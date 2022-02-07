@@ -1,0 +1,35 @@
+
+
+html {
+    height: auto;
+    min-height: 100%;
+      }
+body{
+    height: auto;
+    background: linear-gradient(rgb(0, 183, 255), rgb(0, 255, 106));
+}
+h1{
+    color: blanchedalmond;
+    text-align: center;
+}
+#respuesta{
+    color: blanchedalmond;
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 8%;
+}
+.center-text{
+    text-align: center;
+}
+#texto{
+    font-size: 3vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+#titulo{
+    font-size: 5vh;
+}
+#titulo:hover{
+    animation: animate__tada;
+    color: aqua;
+}
